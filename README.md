@@ -1,1 +1,1 @@
-# atelier-visualisation-des-donn-es
+# atelier-visualisation-des-donnees
