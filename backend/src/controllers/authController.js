@@ -1,16 +1,17 @@
-import { getAuth, signInWithCredential, GoogleAuthProvider } from 'firebase/auth';
+import { getAuth, signInWithCredential, GoogleAuthProvider } from 'firebase/auth'
+import { httpReturnCodes } from '../constant'
 
 const googleSignIn = async (req, res) => {
   try {
-    const { token } = req.body;
-    const auth = getAuth();
-    const credential = GoogleAuthProvider.credential(token);
-    const userCredential = await signInWithCredential(auth, credential);
+    const { token } = req.body
+    const auth = getAuth()
+    const credential = GoogleAuthProvider.credential(token)
+    const userCredential = await signInWithCredential(auth, credential)
 
-    res.status(200).json({ success: true, user: userCredential.user });
+    res.status(httpReturnCodes.OK).json({ success: true, user: userCredential.user })
   } catch (error) {
-    res.status(400).json({ success: false, message: error.message });
+    res.status(httpReturnCodes.BAD_REQUEST).json({ success: false, message: error.message })
   }
-};
+}
 
-export { googleSignIn };
+export { googleSignIn }
