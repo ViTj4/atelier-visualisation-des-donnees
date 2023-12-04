@@ -6,13 +6,10 @@
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-<<<<<<< HEAD
     "file-saver": "^2.0.5",
     "highcharts": "^11.2.0",
     "highcharts-react-official": "^3.2.1",
-=======
     "firebase": "^10.7.0",
->>>>>>> bea8ec95e49a55ab4c1455624210cd4dbd3a718a
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-draggable": "^4.4.6",
