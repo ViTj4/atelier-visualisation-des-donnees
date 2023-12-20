@@ -1,7 +1,8 @@
 import axios from 'axios'
 import { getAuth, signInWithPopup, GoogleAuthProvider } from 'firebase/auth'
+import app from './firebaseConfig'
 
-const auth = getAuth()
+const auth = getAuth(app)
 
 const googleSignIn = async () => {
   try {
